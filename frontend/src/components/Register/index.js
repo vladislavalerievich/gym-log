@@ -130,7 +130,7 @@ const Register = () => {
                 </Formik>
 
                 <div className="col-md-12 text-center">
-                    Already a member? <Link to="/login">Log In</Link>{" "}
+                    Already a member? <Link to={pageRoutes.login}>Log In</Link>
                 </div>
 
             </Stack>

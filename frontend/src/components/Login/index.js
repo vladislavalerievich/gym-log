@@ -112,7 +112,7 @@ const Login = () => {
                     )}
                 </Formik>
                 <div className="col-md-12 text-center">
-                    Don't have an account? <Link to="/register">Register</Link>
+                    Don't have an account? <Link to={pageRoutes.register}>Register</Link>
                 </div>
             </Stack>
         </div>

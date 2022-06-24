@@ -8,6 +8,7 @@ import WorkoutExercise from "./WorkoutExercise";
 import * as api from "../../api/workoutApi";
 import {timestampToString} from "../../utils/helpers";
 import {Link} from "react-router-dom";
+import {pageRoutes} from "../../utils/routes";
 
 
 const WorkoutHistory = () => {
@@ -32,7 +33,7 @@ const WorkoutHistory = () => {
             {data?.length === 0 &&
                 <div className="text-center mt-5">
                     <h5>You don't have any saved workouts!</h5>
-                    <div className="fs-5 mt-3">Start your first <Link to="/workout">workout</Link>!</div>
+                    <div className="fs-5 mt-3">Start your first <Link to={pageRoutes.workout}>workout</Link>!</div>
                 </div>
             }
 
