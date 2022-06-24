@@ -1,0 +1,464 @@
+[
+{
+    "model": "core.exercise",
+    "pk": 1,
+    "fields": {
+        "body_part": "Shoulders",
+        "equipment": "Dumbbell",
+        "name": "Arnold Press",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 2,
+    "fields": {
+        "body_part": "Chest",
+        "equipment": "Barbell",
+        "name": "Bench Press",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 3,
+    "fields": {
+        "body_part": "Chest",
+        "equipment": "Dumbbell",
+        "name": "Bench Press",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 4,
+    "fields": {
+        "body_part": "Back",
+        "equipment": "Barbell",
+        "name": "Bent Over Row",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 5,
+    "fields": {
+        "body_part": "Back",
+        "equipment": "Dumbbell",
+        "name": "Bent Over Row",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 6,
+    "fields": {
+        "body_part": "Biceps",
+        "equipment": "Barbell",
+        "name": "Biceps Curl",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 7,
+    "fields": {
+        "body_part": "Full Body",
+        "equipment": "Bodyweight",
+        "name": "Burpee",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 8,
+    "fields": {
+        "body_part": "Core",
+        "equipment": "Machine",
+        "name": "Cable Crunch",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 9,
+    "fields": {
+        "body_part": "Chest",
+        "equipment": "Bodyweight",
+        "name": "Dip",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 10,
+    "fields": {
+        "body_part": "Chest",
+        "equipment": "Machine",
+        "name": "Chest Fly",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 11,
+    "fields": {
+        "body_part": "Back",
+        "equipment": "Bodyweight",
+        "name": "Chin Up",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 12,
+    "fields": {
+        "body_part": "Full Body",
+        "equipment": "Barbell",
+        "name": "Clean and Jerk",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 13,
+    "fields": {
+        "body_part": "Back",
+        "equipment": "Barbell",
+        "name": "Deadlift",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 14,
+    "fields": {
+        "body_part": "Shoulders",
+        "equipment": "Dumbbell",
+        "name": "Front Raise",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 15,
+    "fields": {
+        "body_part": "Core",
+        "equipment": "Barbell",
+        "name": "Good Morning",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 16,
+    "fields": {
+        "body_part": "Upper Legs",
+        "equipment": "Machine",
+        "name": "Hack Squat",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 17,
+    "fields": {
+        "body_part": "Full Body",
+        "equipment": "Barbell",
+        "name": "Hang Clean",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 18,
+    "fields": {
+        "body_part": "Full Body",
+        "equipment": "Barbell",
+        "name": "Hang Snatch",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 19,
+    "fields": {
+        "body_part": "Core",
+        "equipment": "Bodyweight",
+        "name": "Hanging Leg Raise",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 20,
+    "fields": {
+        "body_part": "Other",
+        "equipment": "Other",
+        "name": "Jump Rope",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 21,
+    "fields": {
+        "body_part": "Shoulders",
+        "equipment": "Dumbbell",
+        "name": "Lateral Raise",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 22,
+    "fields": {
+        "body_part": "Upper Legs",
+        "equipment": "Machine",
+        "name": "Leg Press",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 23,
+    "fields": {
+        "body_part": "Upper Legs",
+        "equipment": "Dumbbell",
+        "name": "Lunge",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 24,
+    "fields": {
+        "body_part": "Full Body",
+        "equipment": "Bodyweight",
+        "name": "Muscle Up",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 25,
+    "fields": {
+        "body_part": "Shoulders",
+        "equipment": "Barbell",
+        "name": "Overhead Press",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 26,
+    "fields": {
+        "body_part": "Core",
+        "equipment": "Bodyweight",
+        "name": "Plank",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 27,
+    "fields": {
+        "body_part": "Back",
+        "equipment": "Bodyweight",
+        "name": "Pull up",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 28,
+    "fields": {
+        "body_part": "Chest",
+        "equipment": "Bodyweight",
+        "name": "Push Up",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 29,
+    "fields": {
+        "body_part": "Upper Legs",
+        "equipment": "Barbell",
+        "name": "Squat",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 30,
+    "fields": {
+        "body_part": "Calves",
+        "equipment": "Machine",
+        "name": "Seated Calf Raise",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 31,
+    "fields": {
+        "body_part": "Calves",
+        "equipment": "Machine",
+        "name": "Standing Calf Raise",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 32,
+    "fields": {
+        "body_part": "Calves",
+        "equipment": "Bodyweight",
+        "name": "Donkey Calf Raise",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 33,
+    "fields": {
+        "body_part": "Glutes",
+        "equipment": "Bodyweight",
+        "name": "Bridge",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 34,
+    "fields": {
+        "body_part": "Forearms",
+        "equipment": "Barbell",
+        "name": "Seated Wrist Curl",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 35,
+    "fields": {
+        "body_part": "Forearms",
+        "equipment": "Other",
+        "name": "Wrist Roller",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 36,
+    "fields": {
+        "body_part": "Triceps",
+        "equipment": "Bodyweight",
+        "name": "Bench Dip",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 37,
+    "fields": {
+        "body_part": "Triceps",
+        "equipment": "Barbell",
+        "name": "Close Grip Bench Press",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 38,
+    "fields": {
+        "body_part": "Triceps",
+        "equipment": "Barbell",
+        "name": "Lying Triceps Extension",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 39,
+    "fields": {
+        "body_part": "Triceps",
+        "equipment": "Dumbbell",
+        "name": "Seated Triceps Press",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 40,
+    "fields": {
+        "body_part": "Shoulders",
+        "equipment": "Bands",
+        "name": "Band Back Fly",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 41,
+    "fields": {
+        "body_part": "Upper Legs",
+        "equipment": "Bands",
+        "name": "Band Squat",
+        "description": "",
+        "user": null
+    }
+},
+{
+    "model": "core.exercise",
+    "pk": 42,
+    "fields": {
+        "body_part": "Neck",
+        "equipment": "Bodyweight",
+        "name": "Neck Bridge",
+        "description": "",
+        "user": null
+    }
+}
+]
