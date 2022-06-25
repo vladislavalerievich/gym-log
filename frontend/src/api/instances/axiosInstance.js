@@ -1,6 +1,6 @@
 import axios from 'axios'
+import createAuthRefreshInterceptor from 'axios-auth-refresh';
 import {apiRoutes} from "../../utils/routes";
-import {isTokenValid} from "../../utils/helpers";
 import store from "../../redux/store";
 
 
@@ -15,42 +15,23 @@ const axiosInstance = axios.create({
 });
 
 
-axiosInstance.interceptors.response.use(
-    response => response,
-    error => {
-        const originalRequest = error.config;
+const refreshAuth = failedRequest =>
+    axiosInstance
+        .post(apiRoutes.refresh, {"refresh": localStorage.getItem('refreshToken')})
+        .then(response => {
+            localStorage.setItem('accessToken', response.data.access);
+            localStorage.setItem('refreshToken', response.data.refresh);
 
-        // Prevent infinite loops
-        if (error.response.status === 401 && originalRequest.url === process.env.REACT_APP_API_UR + apiRoutes.refresh) {
+            axiosInstance.defaults.headers['Authorization'] = "JWT " + response.data.access;
+            failedRequest.response.config.headers['Authorization'] = 'JWT ' + response.data.access;
+            return Promise.resolve();
+        })
+        .catch(error => {
+            console.error("Could not refresh token", error);
             store.dispatch({type: "CLEAR_SESSION"});
-        }
+            return Promise.reject(error);
+        });
 
-        if (error.response.status === 401 && error.response.statusText === "Unauthorized") {
-            const refreshToken = localStorage.getItem('refreshToken');
 
-            if (refreshToken && isTokenValid(refreshToken)) {
-                return axiosInstance
-                    .post(apiRoutes.refresh, {refresh: refreshToken})
-                    .then((response) => {
-                        localStorage.setItem('accessToken', response.data.access);
-                        localStorage.setItem('refreshToken', response.data.refresh);
-
-                        axiosInstance.defaults.headers['Authorization'] = "JWT " + response.data.access;
-                        originalRequest.headers['Authorization'] = "JWT " + response.data.access;
-
-                        return axiosInstance(originalRequest);
-                    })
-                    .catch(err => {
-                        console.error(err)
-                    });
-            } else {
-                store.dispatch({type: "CLEAR_SESSION"});
-            }
-
-        } else {
-            store.dispatch({type: "CLEAR_SESSION"});
-        }
-    }
-);
-
+createAuthRefreshInterceptor(axiosInstance, refreshAuth);
 export default axiosInstance;

@@ -35,7 +35,9 @@ const Profile = () => {
     };
 
     const logoutMutation = useMutation(authApi.blacklist, {
-        onSettled: () => dispatch({type: "CLEAR_SESSION"})
+        onSettled: () => {
+            dispatch({type: "CLEAR_SESSION"});
+        },
     });
 
     return (
