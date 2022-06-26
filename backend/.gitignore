@@ -5,7 +5,6 @@ __pycache__/
 *.pyc
 /backend/db.sqlite3
 .DS_Store
-*/settings/local.py
 /staticfiles/*
 /mediafiles/*
 /.vscode/
