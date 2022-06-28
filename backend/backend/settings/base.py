@@ -1,10 +1,9 @@
 import os
 from datetime import timedelta
-from pathlib import Path
 
 from django.core.management.utils import get_random_secret_key
 
-SECRET_KEY = get_random_secret_key()
+SECRET_KEY = os.environ.get('SECRET_KEY', get_random_secret_key())
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
 
@@ -20,6 +19,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'rest_framework',
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
