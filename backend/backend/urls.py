@@ -1,5 +1,6 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
+from django.views.generic import TemplateView
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 from rest_framework.routers import DefaultRouter
@@ -18,5 +19,7 @@ schema_view = get_schema_view(openapi.Info(title="Gym Log API", default_version=
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/", include((router.urls, 'api'))),
-    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui')
+    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    # Production frontend static files served from root path.
+    re_path(".*", TemplateView.as_view(template_name="index.html")),
 ]
