@@ -28,12 +28,13 @@ To view `Django admin site` open [http://localhost:8000/admin/](http://localhost
 
 1) [Create Heroku Account](https://signup.heroku.com/dc)
 2) [Download/Install/Setup Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
-3) After install, log into Heroku CLI: `heroku login`
+3) After install, log into Heroku CLI: `heroku login`.
 4) Run: `heroku create <your app name>` to create the Heroku application.
 5) Run: `heroku stack:set container` so Heroku knows this is a containerized application.
 6) Run: `heroku addons:create heroku-postgresql:hobby-dev` which creates the postgres add-on for Heroku.
-7) Deploy your app by running: `git push heroku master`.
-8) Go to `<your app name>.herokuapp.com` to see the published web application.
+8) Set your `SECRET_KEY` in Heroku config vars settings.
+9) Deploy your app by running: `git push heroku master`.
+10) Go to `<your app name>.herokuapp.com` to see the published web application.
 
 ### Dockerfile.prod
 
@@ -42,8 +43,8 @@ For deployment heroku uses multi-stage Docker build from `Dockerfile.prod`.
 If you want to build and run the production Dockerfile locally, use these commands:
 
 ```shell
-docker build --build-arg=PORT=1234 -t gym-log:latest .  
-docker run -it -p 1234:1234 gym-log:latest
+docker build --build-arg=PORT=<port num> -t gym-log:latest .  
+docker run -it -p <port num>:<port num> gym-log:latest
 ```
 
 ### Main tools and libraries
