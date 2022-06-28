@@ -10,12 +10,9 @@ FROM python:3.10-slim
 WORKDIR /app/
 COPY --from=frontend-builder /frontend/build/ /app/frontend/build/
 
-# Move all static files other than index.html to root/  (for whitenoise middleware)
+# Move all static files other than index.html to root (for whitenoise middleware)
 WORKDIR /app/frontend/build
-RUN mkdir root && mv *.ico *.js *.json root
-
-# Collect static files
-#RUN mkdir /app/backend/staticfiles
+RUN mkdir root && mv *.ico *.json root
 
 WORKDIR /app/
 COPY ./backend/ /app/
@@ -29,7 +26,7 @@ ENV DJANGO_SETTINGS_MODULE=backend.settings.prod
 
 EXPOSE $PORT
 
-RUN python ./backend/manage.py collectstatic --noinput
+RUN python manage.py collectstatic --noinput
 
-RUN ["chmod", "+x", "/app/entrypoint-prod.sh"]
-ENTRYPOINT ["/app/entrypoint-prod.sh"]
+RUN ["chmod", "+x", "/app/entrypoint.sh"]
+ENTRYPOINT ["/app/entrypoint.sh"]
