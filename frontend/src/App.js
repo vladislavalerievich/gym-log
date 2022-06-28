@@ -10,7 +10,6 @@ import Register from "./components/Register";
 import Profile from "./components/Profile";
 import Workout from "./components/Workout";
 import Exercises from "./components/Exercises";
-import NotFound from "./components/Error/NotFound";
 import WorkoutHistory from "./components/History";
 import ProtectedRoute from "./components/ProtectedRoute";
 import {updateWeightUnit} from "./redux/slices/authSlice";
@@ -42,7 +41,7 @@ const App = () => {
                         <Route path={pageRoutes.workout} element={<ProtectedRoute><Workout/></ProtectedRoute>}/>
                         <Route path={pageRoutes.history} element={<ProtectedRoute><WorkoutHistory/></ProtectedRoute>}/>
                         <Route path={pageRoutes.exercises} element={<ProtectedRoute><Exercises/></ProtectedRoute>}/>
-                        <Route path="*" element={authenticated ? <Navigate to={pageRoutes.workout}/> : <NotFound/>}/>
+                        <Route path="*" element={authenticated ? <Navigate to={pageRoutes.workout}/> : <Login/>}/>
                     </Routes>
                 </Container>
             </Router>
