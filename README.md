@@ -29,6 +29,6 @@ docker-compose up --build
 
 To access the fronted part of application open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To view `Swagger API endpoints` in your browser open [http://localhost:8000/swagger/](http://localhost:8000/swagger/).
+To view `Swagger API endpoints` open [http://localhost:8000/swagger/](http://localhost:8000/swagger/) in your browser.
 
-To view `Django admin site` in your browser open [http://localhost:8000/admin/](http://localhost:8000/admin/).
+To view `Django admin site` open [http://localhost:8000/admin/](http://localhost:8000/admin/) in your browser.
