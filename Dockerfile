@@ -14,9 +14,8 @@ COPY --from=frontend-builder /frontend/build/ /app/frontend/build/
 WORKDIR /app/frontend/build
 RUN mkdir root && mv *.ico *.json root
 
-WORKDIR /app/
+WORKDIR /app
 COPY ./backend/ /app/
-COPY ./backend/scripts/ /app/
 RUN pip3 install --upgrade pip -r requirements.txt
 
 # set environment variables
@@ -24,6 +23,8 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 ENV DJANGO_SETTINGS_MODULE=backend.settings.prod
 
+ARG PORT
+ENV PORT=$PORT
 EXPOSE $PORT
 
 RUN python manage.py collectstatic --noinput
