@@ -2,17 +2,27 @@
 
 ## Local development
 
-Setup local environment for the development process.
+Setup local environment for the development process in the current directory `gym-log/backend`.
+
+### Run in a terminal
 
 Create and Activate virtual environment:
 
+#### Mac OS / Linux
+
 ```shell
-virtualenv --python=/usr/bin/python3.10 venv
-source venv/bin/activate  # Mac OS / Linux
-venv\Scripts\activate   # Windows
+python3.10 -m venv env
+source venv/bin/activate   
 ```
 
-### Available commands
+#### Windows
+
+```shell
+virtualenv --python=/usr/bin/python3.10 venv 
+venv\Scripts\activate    
+```
+
+#### Available commands
 
 ```shell
 pip install -r requirements.txt
@@ -22,8 +32,9 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-Open [http://localhost:8000/swagger/](http://localhost:8000/swagger/) to view it in your browser.
+### Run in a docker
 
-## Production
-
-Set up a PostgreSQL database and provide data in the environment variables that are listed in `.env` file.
+```shell
+docker build -t backend:latest .   
+docker run -it -p 8000:8000 backend:latest
+```
