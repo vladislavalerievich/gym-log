@@ -20,6 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/", include((router.urls, 'api'))),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
-    # Production frontend static files served from root path.
+    # Frontend static files for React application served in production from the root path.
     re_path(".*", TemplateView.as_view(template_name="index.html")),
 ]
