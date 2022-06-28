@@ -37,7 +37,7 @@ To view `Django admin site` open [http://localhost:8000/admin/](http://localhost
 
 ### Dockerfile.prod
 
-For deployment heroku uses `Dockerfile.prod`.
+For deployment heroku uses multi-stage Docker build from `Dockerfile.prod`.
 
 If you want to build and run the production Dockerfile locally, use these commands:
 
