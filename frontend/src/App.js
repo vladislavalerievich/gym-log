@@ -42,7 +42,7 @@ const App = () => {
                         <Route path={pageRoutes.workout} element={<ProtectedRoute><Workout/></ProtectedRoute>}/>
                         <Route path={pageRoutes.history} element={<ProtectedRoute><WorkoutHistory/></ProtectedRoute>}/>
                         <Route path={pageRoutes.exercises} element={<ProtectedRoute><Exercises/></ProtectedRoute>}/>
-                        <Route path="*" element={<NotFound/>}/>
+                        <Route path="*" element={<ProtectedRoute><NotFound/></ProtectedRoute>}/>
                     </Routes>
                 </Container>
             </Router>

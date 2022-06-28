@@ -38,10 +38,9 @@ const Login = () => {
             dispatch(login(data));
             navigate(redirectPath);
         },
-        onError: (error) => {
+        onError: () => {
             setFormSubmitting(false);
-            console.info(error);
-            toast.error("Could not log in. Invalid credentials!")
+            toast.error("Could not log in!")
         },
     });
 

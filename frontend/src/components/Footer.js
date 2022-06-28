@@ -3,7 +3,7 @@ const Footer = () => {
         <footer className="text-center bg-light pt-1">
             <span>Made with &#10084; by </span>
             <a
-                href="https://www.linkedin.com/in/vladislavalerievich/"
+                href={process.env.REACT_APP_AUTHOR_LINKEDIN_URL}
                 target="_blank"
                 rel="noreferrer"
             >

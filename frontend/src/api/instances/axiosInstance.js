@@ -3,9 +3,10 @@ import createAuthRefreshInterceptor from 'axios-auth-refresh';
 import {apiRoutes} from "../../utils/routes";
 import store from "../../redux/store";
 
+const isDevEnv = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 
 const axiosInstance = axios.create({
-    baseURL: process.env.REACT_APP_API_URL,
+    baseURL: isDevEnv ? "http://localhost:8000/api" : "api",
     timeout: 5000,
     headers: {
         'Authorization': "JWT " + localStorage.getItem('accessToken'),

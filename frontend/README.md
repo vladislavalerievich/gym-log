@@ -2,22 +2,20 @@
 
 ## Local development
 
-### Available commands
+Setup local environment for the development process in the current directory `gym-log/frontend`.
 
-In the project directory, you can run:
+### Run in a terminal
+
+Run in the terminal:
 
 ```shell
 npm install 
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Run in a docker
 
-## Deployment
-
-### `npm run build`
-
-Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the
-build for the best performance. The build is minified and the filenames include the hashes.Your app is ready to be
-deployed!
- 
+```shell
+docker build -t frontend:latest .   
+docker run -it -p 3000:3000 frontend:latest
+```

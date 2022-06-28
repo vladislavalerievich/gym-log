@@ -1,8 +1,6 @@
 import os
-
+import dj_database_url
 from backend.settings.base import *
-
-from backend.common.utils import get_env_var
 
 DEBUG = False
 
@@ -14,18 +12,12 @@ MIDDLEWARE += [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-WHITENOISE_STATIC_PREFIX = '/static/'
+DATABASE_URL = os.environ.get('DATABASE_URL')
+DATABASES['default'] = dj_database_url.config(default=DATABASE_URL, conn_max_age=500, ssl_require=True)
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': get_env_var('POSTGRESQL_DATABASE'),
-        'USER': get_env_var('POSTGRESQL_USER'),
-        'PASSWORD': get_env_var('POSTGRESQL_PASSWORD'),
-        'HOST': get_env_var('POSTGRESQL_HOST'),
-        'PORT': int(os.environ.get('POSTGRESQL_PORT', 5432)),
-        'OPTIONS': {
-            'connect_timeout': 3,
-        }
-    }
-}
+TEMPLATES[0]["DIRS"] = [os.path.join(BASE_DIR, "frontend", "build")]
+WHITENOISE_ROOT = os.path.join(BASE_DIR, "frontend", "build", "root")
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "frontend", "build", "static")]

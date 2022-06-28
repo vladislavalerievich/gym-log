@@ -44,8 +44,7 @@ const Register = () => {
             dispatch(login(data));
             navigate(pageRoutes.workout);
         },
-        onError: (error) => {
-            console.error(error);
+        onError: () => {
             toast.error("Could not register!")
         },
     });
