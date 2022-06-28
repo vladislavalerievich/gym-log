@@ -2,6 +2,50 @@
 
 Full Stack Django & React Web App with JWT authentication.
 
+This repo can be used as a starting point for developing a production-ready application using Django, Postgres, and
+React in a Dockerized environment with deployment to Heroku.
+
+## Live Web App
+
+To access the React application go to [the-gym-log.herokuapp.com](https://the-gym-log.herokuapp.com/).
+
+To access Django Swagger API endpoints go
+to [the-gym-log.herokuapp.com/swagger/](https://the-gym-log.herokuapp.com/swagger/).
+
+## Local Deployment
+
+1) Install docker: https://docs.docker.com/get-docker/
+2) Clone github repo.
+3) Run: `docker-compose up --build`.
+
+To access the fronted part of application open [http://localhost:3000](http://localhost:3000) in your browser.
+
+To view `Swagger API endpoints` open [http://localhost:8000/swagger/](http://localhost:8000/swagger/) in your browser.
+
+To view `Django admin site` open [http://localhost:8000/admin/](http://localhost:8000/admin/) in your browser.
+
+## Production Deployment
+
+1) [Create Heroku Account](https://signup.heroku.com/dc)
+2) [Download/Install/Setup Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
+3) After install, log into Heroku CLI: `heroku login`
+4) Run: `heroku create <your app name>` to create the Heroku application.
+5) Run: `heroku stack:set container` so Heroku knows this is a containerized application.
+6) Run: `heroku addons:create heroku-postgresql:hobby-dev` which creates the postgres add-on for Heroku.
+7) Deploy your app by running: `git push heroku master`.
+8) Go to `<your app name>.herokuapp.com` to see the published web application.
+
+### Dockerfile.prod
+
+For deployment heroku uses `Dockerfile.prod`.
+
+If you want to build and run the production Dockerfile locally, use these commands:
+
+```shell
+docker build --build-arg=PORT=1234 -t gym-log:latest .  
+docker run -it -p 1234:1234 gym-log:latest
+```
+
 ### Main tools and libraries
 
 Backend:
@@ -19,16 +63,3 @@ Frontend:
 - `Redux` for managing application state. And `Redux Persist` to store state between page reloads.
 - `Formik` and `Yup` for object schema validation for login and register pages.
 
-### Run application locally
-
-You can run backend and frontend apps separately from their respective directories or use ```Docker Compose```.
-
-````bash
-docker-compose up --build
-````
-
-To access the fronted part of application open [http://localhost:3000](http://localhost:3000) in your browser.
-
-To view `Swagger API endpoints` open [http://localhost:8000/swagger/](http://localhost:8000/swagger/) in your browser.
-
-To view `Django admin site` open [http://localhost:8000/admin/](http://localhost:8000/admin/) in your browser.
