@@ -12,7 +12,7 @@ const ListWorkoutExercises = () => {
     const dispatch = useDispatch();
 
     return (
-        <div>
+        <div className="list-workout-exercises-scroll-container">
             <h6 className="mt-2">Exercises:</h6>
             <ListGroup variant="flush" className="scroll">
                 {exercises?.map((exercise, index) =>

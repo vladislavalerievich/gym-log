@@ -25,9 +25,24 @@ code {
     flex-grow: 2;
 }
 
-.scroll-container {
-    height: 65vh;
+.view-scroll-container {
+    max-height: 65vh;
     overflow: auto;
+}
+
+.select-scroll-container {
+    max-height: 60vh;
+    overflow: auto;
+}
+
+.list-workout-exercises-scroll-container {
+    max-height: 60vh;
+    overflow: auto;
+}
+
+.workout {
+    border: 1px solid lightgrey !important;
+    border-radius: 0.5em !important;
 }
 
 .btn-flex-container {

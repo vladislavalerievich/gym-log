@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form'
 const SelectExercises = ({exercises, handleSelect}) => {
     return (
         <Form onChange={handleSelect}>
-            <ListGroup variant="flush" className="scroll-container">
+            <ListGroup variant="flush" className="select-scroll-container">
                 {exercises?.map(exercise =>
                     <ListGroup.Item key={exercise.id}>
                         <Form.Group>

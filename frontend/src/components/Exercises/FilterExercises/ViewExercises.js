@@ -3,7 +3,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 
 const ViewExercises = ({exercises}) => {
     return (
-        <ListGroup variant="flush" className="scroll-container">
+        <ListGroup variant="flush" className="view-scroll-container">
             {exercises?.map(exercise =>
                 <ListGroup.Item key={exercise.id}>
                     <h6>{exercise.name} ({exercise.equipment})</h6>

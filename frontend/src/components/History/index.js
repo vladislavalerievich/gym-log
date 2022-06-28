@@ -39,7 +39,7 @@ const WorkoutHistory = () => {
 
             <ListGroup variant="flush">
                 {data?.map(workout =>
-                    <ListGroup.Item key={workout.id}>
+                    <ListGroup.Item key={workout.id}  className="workout mb-2">
                         <Row>
                             <Col>
                                 <h5>Workout</h5>
