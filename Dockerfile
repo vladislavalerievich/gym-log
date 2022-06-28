@@ -1,14 +1,14 @@
-# Build step #1: build the React front end
-FROM node:alpine as builder
+# Build step #1: build the React frontend
+FROM node:alpine as frontend-builder
 WORKDIR /frontend
 COPY ./frontend/ /frontend/
 RUN npm install && npm run build
 
-# Build step #2: build the API with the client as static files
+# Build step #2: build the backend API with the frontend as static files
 FROM python:3.10-slim
 
 WORKDIR /app/
-COPY --from=builder /frontend/build /app/frontend/build
+COPY --from=frontend-builder /frontend/build/ /app/frontend/build/
 
 # Move all static files other than index.html to root/  (for whitenoise middleware)
 WORKDIR /app/frontend/build
