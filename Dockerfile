@@ -1,0 +1,35 @@
+# Build step #1: build the React front end
+FROM node:alpine as builder
+WORKDIR /frontend
+COPY ./frontend/ /frontend/
+RUN npm install && npm run build
+
+# Build step #2: build the API with the client as static files
+FROM python:3.10-slim
+
+WORKDIR /app/
+COPY --from=builder /frontend/build /app/frontend/build
+
+# Move all static files other than index.html to root/  (for whitenoise middleware)
+WORKDIR /app/frontend/build
+RUN mkdir root && mv *.ico *.js *.json root
+
+# Collect static files
+#RUN mkdir /app/backend/staticfiles
+
+WORKDIR /app/
+COPY ./backend/ /app/
+COPY ./backend/scripts/ /app/
+RUN pip3 install --upgrade pip -r requirements.txt
+
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+ENV DJANGO_SETTINGS_MODULE=backend.settings.prod
+
+EXPOSE $PORT
+
+RUN python ./backend/manage.py collectstatic --noinput
+
+RUN ["chmod", "+x", "/app/entrypoint-prod.sh"]
+ENTRYPOINT ["/app/entrypoint-prod.sh"]
