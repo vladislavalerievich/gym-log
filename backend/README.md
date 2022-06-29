@@ -1,6 +1,6 @@
 # Gym Log (backend)
 
-## Local Development
+## Local development
 
 Setup local environment for the development process in the current directory `gym-log/backend`.
 
@@ -29,3 +29,7 @@ python manage.py loaddata ./core/fixtures/exercise.json
 python manage.py createsuperuser
 python manage.py runserver
 ```
+
+### Django models relationships
+
+![Django models relationships](https://i.ibb.co/3TV6d90/Models-Reletionshps.png)

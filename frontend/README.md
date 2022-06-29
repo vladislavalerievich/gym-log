@@ -1,6 +1,6 @@
 # Gym Log (frontend)
 
-## Local Development
+## Local development
 
 Setup local environment for the development process in the current directory `gym-log/frontend`.
 

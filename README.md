@@ -2,17 +2,25 @@
 
 Full Stack Django & React Web App with JWT authentication.
 
-This repo can be used as a starting point for developing a production-ready application using Django, Postgres, and
-React in a Dockerized environment with deployment to Heroku.
+This repo can be used as a starting point for developing a production-ready application using Django, React, and
+Postgres in a Dockerized environment with deployment to Heroku.
 
-## Live Web App
+## Live web app
 
 To access the React application go to [the-gym-log.herokuapp.com](https://the-gym-log.herokuapp.com/).
 
 To access Django Swagger API endpoints go
 to [the-gym-log.herokuapp.com/swagger/](https://the-gym-log.herokuapp.com/swagger/).
 
-## Local Deployment
+## Motivation for creating the app
+
+I liked the mobile version of the [strong app](https://www.strong.app/) that allows logging workouts, viewing them, and
+getting a list of available exercises. So I implemented the basic functionality of
+the [strong app](https://www.strong.app/) in a CRUD Web Application with Django & React.
+
+---
+
+## Local deployment
 
 1) Install docker: https://docs.docker.com/get-docker/
 2) Clone github repo.
@@ -24,7 +32,7 @@ To view `Swagger API endpoints` open [http://localhost:8000/swagger/](http://loc
 
 To view `Django admin site` open [http://localhost:8000/admin/](http://localhost:8000/admin/) in your browser.
 
-## Production Deployment
+## Production deployment
 
 1) [Create Heroku Account](https://signup.heroku.com/dc)
 2) [Download/Install/Setup Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
@@ -47,6 +55,8 @@ docker build --build-arg=PORT=<port num> -t gym-log:latest .
 docker run -it -p <port num>:<port num> gym-log:latest
 ```
 
+---
+
 ### Main tools and libraries
 
 Backend:
@@ -63,4 +73,12 @@ Frontend:
 - `React Query` for managing server state, getting data from the backend, and updating it.
 - `Redux` for managing application state. And `Redux Persist` to store state between page reloads.
 - `Formik` and `Yup` for object schema validation for login and register pages.
+
+---
+
+### Ideas for improvement
+
+- Add logic for email confirmation on registration.
+- Add logic for password reset on the login page.
+
 
