@@ -30,6 +30,6 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-### Django models relationships
+### Django models entity relationships diagram
 
 ![Django models relationships](https://i.ibb.co/3TV6d90/Models-Reletionshps.png)
