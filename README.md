@@ -18,8 +18,6 @@ I liked the mobile version of the [strong app](https://www.strong.app/) that all
 getting a list of available exercises. So I implemented the basic functionality of
 the [strong app](https://www.strong.app/) in a CRUD Web Application with Django & React.
 
----
-
 ## Local deployment
 
 1) Install docker: https://docs.docker.com/get-docker/
@@ -55,8 +53,6 @@ docker build --build-arg=PORT=<port num> -t gym-log:latest .
 docker run -it -p <port num>:<port num> gym-log:latest
 ```
 
----
-
 ### Main tools and libraries
 
 Backend:
@@ -73,8 +69,6 @@ Frontend:
 - `React Query` for managing server state, getting data from the backend, and updating it.
 - `Redux` for managing application state. And `Redux Persist` to store state between page reloads.
 - `Formik` and `Yup` for object schema validation for login and register pages.
-
----
 
 ### Ideas for improvement
 
