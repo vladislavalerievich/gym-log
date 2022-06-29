@@ -19,7 +19,7 @@ const ListWorkoutExercises = () => {
                     <ListGroup.Item key={index}>
                         <Row>
                             <Col>
-                                <h5>{exercise.name}</h5>
+                                <h5>{exercise.name} ({exercise.equipment})</h5>
                             </Col>
                             <Col>
                                 <Button
