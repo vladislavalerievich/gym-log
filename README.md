@@ -76,5 +76,4 @@ Frontend:
 
 - Add logic for email confirmation on registration.
 - Add logic for password reset on the login page.
-
-
+- Add internationalization for several languages.
