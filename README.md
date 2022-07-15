@@ -9,8 +9,10 @@ Postgres in a Dockerized environment with deployment to Heroku.
 
 To access the React application go to [the-gym-log.herokuapp.com](https://the-gym-log.herokuapp.com/).
 
-To access Django Swagger API endpoints go
+To access the Django Swagger API endpoints go
 to [the-gym-log.herokuapp.com/swagger/](https://the-gym-log.herokuapp.com/swagger/).
+
+> **_NOTE:_**  The web application may take a few seconds to start up if you are accessing it for the first time.
 
 ## Motivation for creating the app
 
