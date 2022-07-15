@@ -1,7 +1,7 @@
 import os
 import dj_database_url
 from backend.settings.base import *
-from backend.common.utils import get_env_var
+from common.utils import get_env_var
 
 DEBUG = False
 
