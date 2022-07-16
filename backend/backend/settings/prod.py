@@ -21,3 +21,5 @@ WHITENOISE_ROOT = os.path.join(BASE_DIR, "frontend", "build", "root")
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "frontend", "build", "static")]
+
+CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*']
