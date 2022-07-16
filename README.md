@@ -40,9 +40,9 @@ To view `Django admin site` open [http://localhost:8000/admin/](http://localhost
 4) Run: `heroku create <your app name>` to create the Heroku application.
 5) Run: `heroku stack:set container` so Heroku knows this is a containerized application.
 6) Run: `heroku addons:create heroku-postgresql:hobby-dev` which creates the postgres add-on for Heroku.
-8) Set your `SECRET_KEY` in Heroku config vars settings.
-9) Deploy your app by running: `git push heroku master`.
-10) Go to `<your app name>.herokuapp.com` to see the published web application.
+7) Set your `SECRET_KEY` in Heroku config vars settings.
+8) Deploy your app by running: `git push heroku master`.
+9) Go to `<your app name>.herokuapp.com` to see the published web application.
 
 ### Dockerfile.prod
 
