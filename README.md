@@ -12,7 +12,7 @@ To access the React application go to [the-gym-log.herokuapp.com](https://the-gy
 To access the Django Swagger API endpoints go
 to [the-gym-log.herokuapp.com/swagger/](https://the-gym-log.herokuapp.com/swagger/).
 
-> **_NOTE:_**  The web application may take a few seconds to start up if you are accessing it for the first time.
+> **_NOTE:_**  The web application may take a few seconds to start up.
 
 ## Motivation for creating the app
 
@@ -40,9 +40,11 @@ To view `Django admin site` open [http://localhost:8000/admin/](http://localhost
 4) Run: `heroku create <your app name>` to create the Heroku application.
 5) Run: `heroku stack:set container` so Heroku knows this is a containerized application.
 6) Run: `heroku addons:create heroku-postgresql:hobby-dev` which creates the postgres add-on for Heroku.
-7) Set your `SECRET_KEY` in Heroku config vars settings.
-8) Deploy your app by running: `git push heroku master`.
-9) Go to `<your app name>.herokuapp.com` to see the published web application.
+7) Set a `SECRET_KEY` in Heroku config vars settings.
+8) Set the URL of your application, e.g. `https://<app name>.herokuapp.com`, into environment variable `HOST_NAME` in
+   Heroku config vars settings.
+9) Deploy your app by running: `git push heroku master`.
+10) Go to `<your app name>.herokuapp.com` to see the published web application.
 
 ### Dockerfile.prod
 
