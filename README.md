@@ -7,9 +7,9 @@ Postgres in a Dockerized environment with deployment to Heroku.
 
 ## Live web app
 
-To access the React application go to [the-gym-log.herokuapp.com](https://the-gym-log.herokuapp.com/).
+To access the React application, go to [the-gym-log.herokuapp.com](https://the-gym-log.herokuapp.com/).
 
-To access the Django Swagger API endpoints go
+To access the Django Swagger API endpoints, go
 to [the-gym-log.herokuapp.com/swagger/](https://the-gym-log.herokuapp.com/swagger/).
 
 > **_NOTE:_**  The web application may take a few seconds to start up.
@@ -36,7 +36,7 @@ To view `Django admin site` open [http://localhost:8000/admin/](http://localhost
 
 1) [Create Heroku Account](https://signup.heroku.com/dc)
 2) [Download/Install/Setup Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
-3) After install, log into Heroku CLI: `heroku login`.
+3) After installation, log into Heroku CLI: `heroku login`.
 4) Run: `heroku create <your app name>` to create the Heroku application.
 5) Run: `heroku stack:set container` so Heroku knows this is a containerized application.
 6) Run: `heroku addons:create heroku-postgresql:hobby-dev` which creates the postgres add-on for Heroku.
