@@ -3,7 +3,7 @@ from datetime import timedelta
 
 from django.core.management.utils import get_random_secret_key
 
-SECRET_KEY = os.environ.get('SECRET_KEY', get_random_secret_key())
+SECRET_KEY = os.environ.get('SECRET_KEY', "123")
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
 

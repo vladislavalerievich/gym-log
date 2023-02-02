@@ -9,6 +9,9 @@ import * as api from "../../api/workoutApi";
 import {timestampToString} from "../../utils/helpers";
 import {Link} from "react-router-dom";
 import {pageRoutes} from "../../utils/routes";
+import ExerciseDownloadButton from "../Exercises/ExerciseDownloadButton";
+import WorkoutDownloadButton from "./WorkoutDownloadButton";
+import PRDownloadButton from "./PRDownloadButton";
 
 
 const WorkoutHistory = () => {
@@ -28,7 +31,17 @@ const WorkoutHistory = () => {
 
     return (
         <div className="mt-2">
-            <h2 className="text-center">History</h2>
+
+            <Row>
+                <Col>
+                    <h2>History</h2>
+                </Col>
+                <Col className="text-end">
+                    <PRDownloadButton/>
+                    <WorkoutDownloadButton/>
+                </Col>
+            </Row>
+
 
             {data?.length === 0 &&
                 <div className="text-center mt-5">
@@ -39,7 +52,7 @@ const WorkoutHistory = () => {
 
             <ListGroup variant="flush">
                 {data?.map(workout =>
-                    <ListGroup.Item key={workout.id}  className="workout mb-2">
+                    <ListGroup.Item key={workout.id} className="workout mb-2">
                         <Row>
                             <Col>
                                 <h5>Workout</h5>

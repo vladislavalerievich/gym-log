@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button";
 import NewExerciseModal from "./NewExerciseModal";
 import FilterExercises from "./FilterExercises";
 import ViewExercises from "./FilterExercises/ViewExercises";
+import ExerciseDownloadButton from "./ExerciseDownloadButton";
 
 
 const Exercises = () => {
@@ -23,6 +24,7 @@ const Exercises = () => {
                     <Col>
                         <h2>Exercises</h2>
                     </Col>
+                    <Col className="text-center"><ExerciseDownloadButton/></Col>
                     <Col>
                         <Button
                             className="float-end"
