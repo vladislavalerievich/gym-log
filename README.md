@@ -14,6 +14,9 @@ to [gym-log.herokuapp.com/swagger/](https://gym-log.herokuapp.com/swagger/).
 
 > **_NOTE:_**  The web application may take a few seconds to start up.
 
+---
+![Live web app screenshot](https://i.ibb.co/jLYCLP4/Screenshot-2024-06-30-205650.png)
+
 ## Motivation for creating the app
 
 I liked the mobile version of the [strong app](https://www.strong.app/) that allows logging workouts, viewing them, and
